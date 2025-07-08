@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Container from '../UI/Container';
 import Button from '../UI/Button';
 import { FaWater } from 'react-icons/fa';
+import logo from '../../assets/images/logo.png'; // Importe a imagem da logo
 
 const AreiaFiltranteSection = styled.section`
   padding: 6rem 0 4rem;
@@ -13,6 +14,10 @@ const SectionTitle = styled.h2`
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
+  color: #333;
+  display: flex; /* Adicionado para alinhar a logo */
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center; /* Alinha verticalmente */
   color: #333;
   
   span {
@@ -72,11 +77,22 @@ const IconContainer = styled.div`
   text-align: center;
 `;
 
+const LogoImage = styled.img`
+  height: 50px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-left: 1rem; /* Espaçamento entre o título e a logo */
+`;
+
 const AreiaFiltrante = () => {
   return (
     <AreiaFiltranteSection id="areia-filtrante">
       <Container>
-        <SectionTitle>Areia <span>Filtrante</span></SectionTitle>
+        <SectionTitle>
+          Areia <span>Filtrante</span>
+          <LogoImage src={logo} alt="Logo Mineração Cezar" /> {/* Adicione a logo aqui */}
+        </SectionTitle>
+
+        
+
         
         <ContentContainer>
           <TextContainer>
